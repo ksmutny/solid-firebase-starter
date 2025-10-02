@@ -1,2 +1,4 @@
 node_modules/
 .vite/
+specs/steps-gen/
+test-results/

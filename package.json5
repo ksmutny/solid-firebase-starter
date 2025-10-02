@@ -2,16 +2,24 @@
     "name": "solid-firebase-starter",
     "version": "0.0.1",
     "scripts": {
+        "dev": "vite",
+
         "codeq:tsc": "tsc -b && rm *.tsbuildinfo",
         "codeq:format": "biome format --write",
         "codeq:lint": "biome lint --fix",
         "codeq": "pnpm codeq:tsc && pnpm codeq:format && pnpm codeq:lint",
+
+        "test:e2e": "bddgen && playwright test",
+        "test:e2e:ui": "bddgen && playwright test --ui",
     },
     "dependencies": {
         "solid-js": "1.9.9",
     },
     "devDependencies": {
         "@biomejs/biome": "2.2.5",
+        "@cucumber/cucumber": "12.2.0",
+        "@playwright/test": "1.55.1",
+        "playwright-bdd": "8.4.1",
         "sass": "1.93.2",
         "typescript": "5.9.3",
         "vite": "7.1.8",
