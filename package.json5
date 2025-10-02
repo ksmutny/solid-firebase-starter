@@ -1,6 +1,12 @@
 {
     "name": "solid-firebase-starter",
     "version": "0.0.1",
+    "scripts": {
+        "codeq:tsc": "tsc -b && rm *.tsbuildinfo",
+        "codeq:format": "biome format --write",
+        "codeq:lint": "biome lint --fix",
+        "codeq": "pnpm codeq:tsc && pnpm codeq:format && pnpm codeq:lint",
+    },
     "dependencies": {
         "solid-js": "1.9.9",
     },
