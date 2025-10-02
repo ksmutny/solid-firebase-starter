@@ -10,6 +10,8 @@
         "resolveJsonModule": true,
         "allowImportingTsExtensions": true,
 
+        "baseUrl": "src",
+
         "strict": true,
         "noUnusedLocals": true,
         "noUnusedParameters": true,
