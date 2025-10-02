@@ -6,7 +6,7 @@ export const App = () => {
 
     return <>
         <h1>Solid Firebase Starter</h1>
-        <button onClick={ increment }>Increment</button>
+        <button type="button" onClick={ increment }>Increment</button>
         <p>Count: { count() }</p>
     </>
 }
