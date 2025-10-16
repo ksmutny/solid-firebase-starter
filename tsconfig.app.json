@@ -9,6 +9,7 @@
         "moduleResolution": "bundler",
         "resolveJsonModule": true,
         "allowImportingTsExtensions": true,
+        "types": ["vite/client"],
 
         "baseUrl": "src",
 
