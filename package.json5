@@ -17,14 +17,19 @@
         "solid-js": "1.9.9",
     },
     "devDependencies": {
+        // Code quality
         "@biomejs/biome": "2.2.5",
-        "@cucumber/cucumber": "12.2.0",
-        "@playwright/test": "1.55.1",
-        "playwright-bdd": "8.4.1",
-        "sass": "1.93.2",
-        "typescript": "5.9.3",
+
+        // Bundle
         "vite": "7.1.8",
         "vite-plugin-solid": "2.11.9",
         "vite-tsconfig-paths": "5.1.4",
+        "sass": "1.93.2",
+        "typescript": "5.9.3",
+
+        // E2E Tests
+        "@cucumber/cucumber": "12.2.0",
+        "@playwright/test": "1.55.1",
+        "playwright-bdd": "8.4.1",
     },
 }
