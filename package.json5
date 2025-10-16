@@ -9,10 +9,11 @@
         "codeq:lint": "biome lint --fix",
         "codeq": "pnpm codeq:tsc && pnpm codeq:format && pnpm codeq:lint",
 
-        "test:e2e": "bddgen && playwright test",
-        "test:e2e:ui": "bddgen && playwright test --ui",
+        "test:e2e": "bddgen && firebase emulators:exec 'playwright test'",
+        "test:e2e:ui": "bddgen && firebase emulators:exec 'playwright test --ui'",
     },
     "dependencies": {
+        "firebase": "12.3.0",
         "solid-js": "1.9.9",
     },
     "devDependencies": {
