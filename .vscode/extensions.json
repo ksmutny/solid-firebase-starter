@@ -1,6 +1,7 @@
 {
     "recommendations": [
         "biomejs.biome",
+        "blueglassblock.better-json5",
         "editorconfig.editorconfig",
         "cucumberopen.cucumber-official",
         "ms-playwright.playwright"
