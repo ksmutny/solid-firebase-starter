@@ -13,5 +13,7 @@
     },
     "[jsonc]": {
         "editor.defaultFormatter": "biomejs.biome"
-    }
+    },
+    "cucumber.features": ["specs/features/**/*.feature"],
+    "cucumber.glue": ["specs/steps/**/*.ts"]
 }
