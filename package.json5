@@ -2,15 +2,22 @@
     "name": "solid-firebase-starter",
     "version": "0.0.1",
     "scripts": {
-        "dev": "vite",
+        "dev": "vite --host",
 
         "codeq:tsc": "tsc -b && rm *.tsbuildinfo",
         "codeq:format": "biome format --write",
         "codeq:lint": "biome lint --fix",
         "codeq": "pnpm codeq:tsc && pnpm codeq:format && pnpm codeq:lint",
 
-        "test:e2e": "bddgen && firebase emulators:exec 'playwright test'",
-        "test:e2e:ui": "bddgen && firebase emulators:exec 'playwright test --ui'",
+        // E2E Tests helpers, do not run these directly
+        "fbemu": "firebase emulators:exec",
+        "test:e2e:watch": "chokidar specs/features/**/*.feature -c bddgen",
+        "test:e2e:playwright": "pnpm fbemu 'playwright test'",
+        "test:e2e:playwright-ui": "pnpm fbemu 'playwright test --ui-host=0.0.0.0 --ui-port=3000'",
+
+        // E2E Tests
+        "test:e2e": "bddgen && pnpm test:e2e:playwright",
+        "test:e2e:ui": "concurrently 'pnpm test:e2e:watch' 'pnpm test:e2e:playwright-ui'",
     },
     "dependencies": {
         "firebase": "12.3.0",
@@ -31,5 +38,10 @@
         "@cucumber/cucumber": "12.2.0",
         "@playwright/test": "1.55.1",
         "playwright-bdd": "8.4.1",
+
+        // Shell utils
+        "chokidar-cli": "3.0.0",
+        "concurrently": "9.1.2",
+        "wait-on": "8.0.1",
     },
 }
