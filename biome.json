@@ -11,7 +11,12 @@
         "lineWidth": 120
     },
     "linter": {
-        "enabled": true
+        "enabled": true,
+        "rules": {
+            "suspicious": {
+                "useAwait": "error"
+            }
+        }
     },
     "assist": {
         "enabled": true
