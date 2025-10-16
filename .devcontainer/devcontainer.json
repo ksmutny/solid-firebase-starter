@@ -1,0 +1,19 @@
+{
+    "image": "ghcr.io/scrumdojo/dev-firebase:v1",
+    "forwardPorts": [
+        3000, // Playwright UI
+        5173, // Vite dev server
+        8088 // Firebase Emulator
+    ],
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "blueglassblock.better-json5",
+                "biomejs.biome",
+                "editorconfig.editorconfig",
+                "cucumberopen.cucumber-official",
+                "ms-playwright.playwright"
+            ]
+        }
+    }
+}
