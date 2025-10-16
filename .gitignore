@@ -1,4 +1,5 @@
 node_modules/
+.pnpm-store/
 .vite/
 firebase-debug.log
 firestore-debug.log
