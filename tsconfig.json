@@ -1,18 +1,4 @@
 {
-    "extends": "./tsconfig.base.json",
-    "compilerOptions": {
-        // General (browser-specific)
-        "jsx": "preserve",
-        "jsxImportSource": "solid-js",
-        "lib": ["DOM", "DOM.Iterable", "ESNext"],
-
-        // Modules
-        "baseUrl": ".",
-        "paths": {
-            "@/*": ["src/*"],
-            "@test/*": ["tests/*"]
-        },
-        "types": ["vite/client"]
-    },
-    "include": ["src/**/*", "tests/**/*"]
+    "files": [],
+    "references": [{ "path": "./webapp" }]
 }

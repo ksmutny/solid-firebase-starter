@@ -1,42 +1,25 @@
 {
     "name": "solid-firebase-starter",
-    "version": "0.0.1",
     "private": true,
-    "type": "module",
     "scripts": {
-        // Web app
-        "dev": "vite --host",
-        "build": "vite build",
+        // Webapp
+        "dev": "pnpm -C webapp dev",
+        "build": "pnpm -C webapp build",
 
         // Test
-        "test": "vitest",
-        "test:ui": "vitest --ui --api.host=0.0.0.0",
+        "test": "pnpm -C webapp test",
+        "test:ui": "pnpm -C webapp test:ui",
 
         // Code quality
-        "codeq:tsc": "tsc -b && rm *.tsbuildinfo",
+        "codeq:tsc": "tsc -b",
         "codeq:format": "biome format --write",
         "codeq:lint": "biome lint --fix",
         "codeq:imports": "biome check --formatter-enabled=false --linter-enabled=false --write",
         "codeq": "pnpm codeq:tsc && pnpm codeq:format && pnpm codeq:lint && pnpm codeq:imports"
     },
-    "dependencies": {
-        "solid-js": "1.9.10"
-    },
     "devDependencies": {
-        // Bundle
-        "sass": "1.97.1",
-        "typescript": "5.9.3",
-        "vite": "7.3.0",
-        "vite-plugin-solid": "2.11.10",
-        "vite-tsconfig-paths": "6.0.3",
-
-        // Test
-        "@vitest/browser-playwright": "4.0.16",
-        "@vitest/ui": "4.0.16",
+        "@biomejs/biome": "2.3.10",
         "playwright": "1.57.0",
-        "vitest": "4.0.16",
-
-        // Code quality
-        "@biomejs/biome": "2.3.10"
+        "typescript": "5.9.3",
     }
 }

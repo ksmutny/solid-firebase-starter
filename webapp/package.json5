@@ -1,0 +1,30 @@
+{
+    "name": "@solid-firebase-starter/webapp",
+    "version": "0.0.1",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        // Web app
+        "dev": "vite --host",
+        "build": "vite build",
+
+        // Test
+        "test": "vitest",
+        "test:ui": "vitest --ui --api.host=0.0.0.0",
+    },
+    "dependencies": {
+        "solid-js": "1.9.10"
+    },
+    "devDependencies": {
+        // Bundle
+        "sass": "1.97.1",
+        "vite": "7.3.0",
+        "vite-plugin-solid": "2.11.10",
+        "vite-tsconfig-paths": "6.0.3",
+
+        // Test
+        "@vitest/browser-playwright": "4.0.16",
+        "@vitest/ui": "4.0.16",
+        "vitest": "4.0.16",
+    }
+}
