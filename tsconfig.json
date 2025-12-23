@@ -1,37 +1,17 @@
 {
+    "extends": "./tsconfig.base.json",
     "compilerOptions": {
-        // General
+        // General (browser-specific)
         "jsx": "preserve",
         "jsxImportSource": "solid-js",
-        "target": "ESNext",
         "lib": ["DOM", "DOM.Iterable", "ESNext"],
 
         // Modules
-        "baseUrl": "src",
+        "baseUrl": ".",
         "paths": {
-            "@/*": ["./*"]
+            "@/*": ["src/*"]
         },
-        "allowSyntheticDefaultImports": true,
-        "allowImportingTsExtensions": true,
-        "esModuleInterop": true,
-        "isolatedModules": true,
-        "module": "ESNext",
-        "moduleDetection": "force",
-        "moduleResolution": "bundler",
-        "noEmit": true,
-        "resolveJsonModule": true,
-
-        // Type Checking & Safety
-        "strict": true,
-        "exactOptionalPropertyTypes": true,
-        "noImplicitOverride": true,
-        "noPropertyAccessFromIndexSignature": true,
-        "noUnusedLocals": true,
-        "noUnusedParameters": true,
-        "noFallthroughCasesInSwitch": true,
-        "noUncheckedIndexedAccess": true,
-        "useUnknownInCatchVariables": true,
-        "skipLibCheck": true,
         "types": ["vite/client"]
-    }
+    },
+    "include": ["src/**/*"]
 }
