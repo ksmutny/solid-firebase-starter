@@ -2,3 +2,5 @@
 dist/
 node_modules/
 *.tsbuildinfo
+specs/steps-gen/
+specs/test-results/

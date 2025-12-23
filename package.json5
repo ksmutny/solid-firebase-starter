@@ -6,9 +6,13 @@
         "dev": "pnpm -C webapp dev",
         "build": "pnpm -C webapp build",
 
-        // Test
-        "test": "pnpm -C webapp test",
-        "test:ui": "pnpm -C webapp test:ui",
+        // Unit tests
+        "test:unit": "pnpm -C webapp test",
+        "test:unit:ui": "pnpm -C webapp test:ui",
+
+        // E2E tests
+        "test:e2e": "pnpm -C specs test:e2e",
+        "test:e2e:ui": "pnpm -C specs test:e2e:ui",
 
         // Code quality
         "codeq:tsc": "tsc -b",
@@ -19,7 +23,7 @@
     },
     "devDependencies": {
         "@biomejs/biome": "2.3.10",
-        "playwright": "1.57.0",
+        "@playwright/test": "1.57.0",
         "typescript": "5.9.3",
     }
 }

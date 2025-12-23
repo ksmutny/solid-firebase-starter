@@ -1,3 +1,10 @@
 {
-    "recommendations": ["biomejs.biome", "blueglassblock.better-json5", "editorconfig.editorconfig", "vitest.explorer"]
+    "recommendations": [
+        "biomejs.biome",
+        "blueglassblock.better-json5",
+        "cucumberopen.cucumber-official",
+        "editorconfig.editorconfig",
+        "ms-playwright.playwright",
+        "vitest.explorer"
+    ]
 }

@@ -22,5 +22,8 @@
     "typescript.preferences.quoteStyle": "single",
     "javascript.preferences.quoteStyle": "single",
     "typescript.preferences.importModuleSpecifierEnding": "js",
-    "javascript.preferences.importModuleSpecifierEnding": "js"
+    "javascript.preferences.importModuleSpecifierEnding": "js",
+
+    "cucumber.features": ["specs/features/**/*.feature"],
+    "cucumber.glue": ["specs/src/steps/**/*.ts"]
 }

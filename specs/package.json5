@@ -1,0 +1,26 @@
+{
+    "name": "@solid-firebase-starter/specs",
+    "version": "0.0.1",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        // E2E Tests helpers, do not run these directly
+        "test:e2e:watch": "chokidar 'features/**/*.feature' -c bddgen",
+        "test:e2e:playwright": "pnpm playwright test",
+        "test:e2e:playwright-ui": "pnpm playwright test --ui-host=0.0.0.0 --ui-port=3000",
+
+        // E2E Tests
+        "test:e2e": "bddgen && pnpm test:e2e:playwright",
+        "test:e2e:ui": "concurrently 'pnpm test:e2e:watch' 'pnpm test:e2e:playwright-ui'",
+    },
+    "devDependencies": {
+        // E2E Tests
+        "@cucumber/cucumber": "12.4.0",
+        "playwright-bdd": "8.4.2",
+
+        // Shell utils
+        "chokidar-cli": "3.0.0",
+        "concurrently": "9.1.2",
+        "wait-on": "9.0.3",
+    },
+}
