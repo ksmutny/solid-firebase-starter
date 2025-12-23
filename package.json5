@@ -10,6 +10,7 @@
 
         // Test
         "test": "vitest",
+        "test:ui": "vitest --ui --api.host=0.0.0.0",
 
         // Code quality
         "codeq:tsc": "tsc -b && rm *.tsbuildinfo",
@@ -31,6 +32,7 @@
 
         // Test
         "@vitest/browser-playwright": "4.0.16",
+        "@vitest/ui": "4.0.16",
         "playwright": "1.57.0",
         "vitest": "4.0.16",
 
