@@ -5,7 +5,12 @@
     "type": "module",
     "scripts": {
         "dev": "vite --host",
-        "build": "vite build"
+        "build": "vite build",
+        "codeq:tsc": "tsc -b && rm *.tsbuildinfo",
+        "codeq:format": "biome format --write",
+        "codeq:lint": "biome lint --fix",
+        "codeq:imports": "biome check --formatter-enabled=false --linter-enabled=false --write",
+        "codeq": "pnpm codeq:tsc && pnpm codeq:format && pnpm codeq:lint && pnpm codeq:imports"
     },
     "dependencies": {
         "solid-js": "1.9.10"
@@ -15,6 +20,8 @@
         "typescript": "5.9.3",
         "vite": "7.3.0",
         "vite-plugin-solid": "2.11.10",
-        "vite-tsconfig-paths": "6.0.3"
+        "vite-tsconfig-paths": "6.0.3",
+
+        "@biomejs/biome": "2.3.10"
     }
 }
