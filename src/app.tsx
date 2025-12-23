@@ -1,4 +1,4 @@
-import { Counter } from './counter.tsx'
+import { Counter } from '@/counter.tsx'
 
 export const App = () => (
     <>

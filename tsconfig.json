@@ -7,6 +7,10 @@
         "lib": ["DOM", "DOM.Iterable", "ESNext"],
 
         // Modules
+        "baseUrl": "src",
+        "paths": {
+            "@/*": ["./*"]
+        },
         "allowSyntheticDefaultImports": true,
         "allowImportingTsExtensions": true,
         "esModuleInterop": true,
