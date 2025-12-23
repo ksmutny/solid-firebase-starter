@@ -1,10 +1,10 @@
-import { createSignal } from 'solid-js'
+import { createCounter } from '@/signals/create-counter.ts'
 
 export const Counter = () => {
-    const [count, setCount] = createSignal(0)
+    const { count, inc } = createCounter()
 
     return (
-        <button type="button" onClick={() => setCount(prev => prev + 1)}>
+        <button type="button" onClick={inc}>
             Count: {count()}
         </button>
     )

@@ -9,9 +9,10 @@
         // Modules
         "baseUrl": ".",
         "paths": {
-            "@/*": ["src/*"]
+            "@/*": ["src/*"],
+            "@test/*": ["tests/*"]
         },
         "types": ["vite/client"]
     },
-    "include": ["src/**/*"]
+    "include": ["src/**/*", "tests/**/*"]
 }
