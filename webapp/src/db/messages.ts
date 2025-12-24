@@ -1,4 +1,5 @@
 import { collection, type FirestoreDataConverter, type QueryDocumentSnapshot } from 'firebase/firestore'
+
 import { firestore } from '@/lib/firebase.ts'
 import { lazy } from '@/lib/fn.ts'
 import type { Message } from '@/model/message.ts'

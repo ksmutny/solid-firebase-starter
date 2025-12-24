@@ -29,5 +29,27 @@
             "arrowParentheses": "asNeeded",
             "trailingCommas": "all"
         }
+    },
+    "assist": {
+        "enabled": true,
+        "actions": {
+            "source": {
+                "organizeImports": {
+                    "level": "on",
+                    "options": {
+                        "groups": [
+                            ["./*.scss"],
+                            [":NODE:", ":PACKAGE:"],
+                            ":BLANK_LINE:",
+                            ["@/**", "!@/**/*.js", "!@/**/*.ts", "!@/**/*.tsx", "!@/**/*.json"],
+                            ":BLANK_LINE:",
+                            ["@/**/*.js", "@/**/*.ts", "@/**/*.tsx", "@/**/*.json"],
+                            ":BLANK_LINE:",
+                            [":PATH:"]
+                        ]
+                    }
+                }
+            }
+        }
     }
 }

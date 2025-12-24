@@ -1,5 +1,6 @@
 import { addDoc, onSnapshot } from 'firebase/firestore'
 import { createSignal, onCleanup, onMount } from 'solid-js'
+
 import { messageCollection } from '@/db/messages.ts'
 import type { Message } from '@/model/message.ts'
 

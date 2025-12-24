@@ -1,4 +1,5 @@
 import { expect } from '@playwright/test'
+
 import { Given, Then, When, type World } from '@/steps/world.ts'
 
 Given('I open the app', async function (this: World) {

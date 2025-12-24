@@ -1,5 +1,6 @@
 import type { Page, TestInfo } from '@playwright/test'
 import { test as base, createBdd } from 'playwright-bdd'
+
 import { AppPage } from '@/pages/app.page.ts'
 import { MessagesPage } from '@/pages/messages.page.ts'
 

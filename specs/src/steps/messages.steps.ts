@@ -1,4 +1,5 @@
 import { expect } from '@playwright/test'
+
 import { Then, When, type World } from '@/steps/world.ts'
 
 When('I submit message {string}', async function (this: World, text: string) {
