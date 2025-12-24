@@ -2,17 +2,19 @@
     "name": "solid-firebase-starter",
     "private": true,
     "scripts": {
-        // Webapp
-        "dev": "pnpm -C webapp dev",
+        "fbemu": "firebase emulators:exec",
+
+        // Webapp (with Firebase emulators)
+        "dev": "pnpm fbemu 'pnpm -C webapp dev'",
         "build": "pnpm -C webapp build",
 
         // Unit tests
         "test:unit": "pnpm -C webapp test",
         "test:unit:ui": "pnpm -C webapp test:ui",
 
-        // E2E tests
-        "test:e2e": "pnpm -C specs test:e2e",
-        "test:e2e:ui": "pnpm -C specs test:e2e:ui",
+        // E2E tests (with Firebase emulators)
+        "test:e2e": "pnpm fbemu 'pnpm -C specs test:e2e'",
+        "test:e2e:ui": "pnpm fbemu 'pnpm -C specs test:e2e:ui'",
 
         // Code quality
         "codeq:tsc": "tsc -b",

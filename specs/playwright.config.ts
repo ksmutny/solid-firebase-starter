@@ -10,7 +10,7 @@ export default defineConfig({
         outputDir: 'steps-gen',
     }),
     webServer: {
-        command: 'pnpm -C webapp dev',
+        command: 'pnpm -C webapp dev:local',
         url: appUrl,
         reuseExistingServer: true,
         cwd: '..',

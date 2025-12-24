@@ -6,6 +6,7 @@
     "scripts": {
         // Web app
         "dev": "vite --host",
+        "dev:local": "vite",
         "build": "vite build",
 
         // Test
@@ -13,6 +14,7 @@
         "test:ui": "vitest --ui --api.host=0.0.0.0",
     },
     "dependencies": {
+        "firebase": "12.7.0",
         "solid-js": "1.9.10"
     },
     "devDependencies": {
